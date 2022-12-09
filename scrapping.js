@@ -8,7 +8,7 @@ function delay(time) {
 
 export async function init (){
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         defaultViewport:{
             width: 1080,
             height: 720
@@ -19,7 +19,6 @@ export async function init (){
     const page = await browser.newPage();
     await page.goto('https://wheeltheworld.com/destinations/accessible-travel-argentina/buenos-aires?travelers=2&adults=2&children=0&formattedDate=')
     await page.waitForSelector('.chakra-input')
-    console.log('Iniciado');
     return page;
 }
 
@@ -38,14 +37,11 @@ try {
     } catch (error) {
         await page.goto('https://wheeltheworld.com/destinations/accessible-travel-argentina/buenos-aires?travelers=2&adults=2&children=0&formattedDate=')
         await page.waitForSelector('.chakra-input')
-        console.log(error);
         return [{error: 'No se han encontrado Lugares, Pronto estaran disponibles'}]
     }
     await scrollToBottom(page);
     const elements = await page.evaluate(()=>{
         const elements = document.querySelectorAll('.css-1ljzhcy');
-        console.log(elements);
-
         let arrayOfElements=[];
         elements.forEach(e=>{
             let obj = {
@@ -59,52 +55,43 @@ try {
             try {
                 obj.url = e.children[0].href !== undefined ? e.children[0].href : 'Any Url';
             } catch (error) {
-                console.log(error);
             }
 
             try {
                 obj.img = e.children[0].children[0].children[0].children[0].src !== undefined ?e.children[0].children[0].children[0].children[0].src:'Any url Image';
                 
             } catch (error) {
-                console.log(error);
             }
             //----***----//
             try {
                 obj.title = e.children[0].children[0].children[1].children[0].children[0].children[0].children[1].innerText !== undefined ?  e.children[0].children[0].children[1].children[0].children[0].children[0].children[1].innerText : 'Any Title';
             } catch (error) {
-                console.log(error);
             }
             //---
             try {
                 obj.description = e.children[0].children[0].children[1].children[0].children[0].children[2].innerText !== undefined?e.children[0].children[0].children[1].children[0].children[0].children[2].innerText: 'Any Description';
 
             } catch (error) {
-                console.log(error);
             }
             //---
             try {
                 obj.calification = e.children[0].children[0].children[1].children[0].children[0].children[0].children[0].innerText !== undefined ?  e.children[0].children[0].children[1].children[0].children[0].children[0].children[0].innerText:'Any Calification';
             } catch (error) {
-                console.log(error);
+                
             }
             //---
             try {
                 obj.location = e.children[0].children[0].children[1].children[0].children[0].children[1].children[1].innerText !== undefined ? e.children[0].children[0].children[1].children[0].children[0].children[1].children[1].innerText : 'Any Location';
             } catch (error) {
-                console.log(error);
+                
             }
-            
-
-            
             arrayOfElements.push(obj);
         })
 
         return arrayOfElements;
     })
-    console.log(elements);
     return elements;
 } catch (error) {
-    console.log(error);
     await page.goto('https://wheeltheworld.com/destinations/accessible-travel-argentina/buenos-aires?travelers=2&adults=2&children=0&formattedDate=')
     await page.waitForSelector('.chakra-input')
     return [{error: 'No se han encontrado Lugares, Pronto estaran disponibles'}]
