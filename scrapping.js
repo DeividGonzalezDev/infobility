@@ -13,7 +13,7 @@ export async function init (){
             width: 1080,
             height: 720
         }, 
-        args: ['--window-size=1920,1080']
+        args: ["--no-sandbox"]
     });
 
     const page = await browser.newPage();
