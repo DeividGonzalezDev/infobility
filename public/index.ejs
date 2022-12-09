@@ -37,7 +37,7 @@
             </div>
             <div class="search-options">
                 <div>
-                    <h3>A Donde Quieres Ir?</h3>
+                    <h3>A Dónde Quieres Ir?</h3>
                     <input type="text" placeholder="Introduce el Nombre de Destino" id="search-query">
                 </div>
                 <button id="search" onclick="search()">Buscar</button>
@@ -63,32 +63,36 @@
         </section>
         <section class="results-section">
             <div class="results-container">
-                <h2 class="texto-no-hay-busqueda">Los Resultados de las Busquedas Apareceran aqui</h2>
+                <h2 class="texto-no-hay-busqueda">Los Resultados de las Busquedas Aparecerán aquí</h2>
             </div>
         </section>
         
-        <h2 class="principales-destinos-h2">Principales Destinos Acessibles</h2>
         <section class="principales-destinos">
-            <div class="destino">
-                <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="">
-                <h4>Nueva York</h4>
-                <p>Estados Unidos</p>
+            <img src="./sources/icons8-web-accessibility-100.png" alt="" srcset="">
+            <img src="./sources/icons8-web-accessibility-100.png" alt="" srcset="">
+            <h2 class="principales-destinos-h2">Entrevistas</h2>
+            <div class="destinos-container">
+                <div class="destino">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QJYv9JbXiVs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-top-left-radius: 15px; border-top-right-radius: 15px;"></iframe>
+                    <h4>Gladys</h4>
+                    <p>Uruguay</p>
+                </div>
+                <div class="destino">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-TXxg4fMI98?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-top-left-radius: 15px; border-top-right-radius: 15px;"></iframe>
+                    <h4>Ana</h4>
+                    <p>Uruguay</p>
+                </div>
             </div>
-            <div class="destino">
+            <!-- <div class="destino">
                 <img src="https://wheeltheworld.com/_next/image?url=https%3A%2F%2Fassets.wheeltheworld.com%2Flistings%2Fdestinations%2F62cd8d2704137237101706_main.jpg&w=1920&q=75" alt="">
                 <h4>Miami</h4>
                 <p>Estados Unidos</p>
-            </div>
-            <div class="destino">
-                <img src="https://montevideo.gub.uy/sites/default/files/styles/galeriaslideshowcontenido/public/biblioteca/imf5909.jpg?itok=Giu37pav" alt="">
-                <h4>Montevideo</h4>
-                <p>Uruguay</p>
-            </div>
+            </div> -->
         </section>
         <!-- <section class="accesibility-option"> -->
-            <div class="button-accesibility-options"><i class="fa-solid fa-user"></i></div>
+            <div class="button-accesibility-options"><img src="./sources/icons8-web-accessibility-100.png" alt="" srcset=""></div>
             <div class="accesibility-popup cerrar">
-                <h2 class="options-title">Opciones de Accesibilidad</h2>
+                <h2 class="options-title">Opciones de accesibilidad</h2>
                 <div>
                     <i class="fa-solid fa-volume-high"></i>
                     <h2>Opciones para discapacidades auditivas</h2>
@@ -129,7 +133,7 @@
                     
                     <ul class="ul">
                         <li><a href="#">Comunidad</a></li>
-                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Políticas de privacidad</a></li>
                         <li><a href="#">Donaciones</a></li>
                     </ul>
             
@@ -177,7 +181,7 @@
             if(results[0].error){
                 return document.querySelector('.results-container').innerHTML = `<h1 class="texto-no-hay-busqueda">${results[0].error}</h2>`;
             }
-            let html = '';
+            let html = `<h2>Resultados para ${results[3].location}</h2>`;
             results.forEach(e =>{
                 html += `<a href="${e.url}">
                     <div class="result">

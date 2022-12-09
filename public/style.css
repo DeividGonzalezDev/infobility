@@ -51,6 +51,9 @@ body header li ul button {
   font-weight: 700;
   cursor: pointer;
 }
+body main {
+  z-index: 0;
+}
 body main .search-section {
   display: flex;
   flex-direction: column;
@@ -153,12 +156,18 @@ body main .opciones-de-experiencia .opcion-experiencia img {
 body main .opciones-de-experiencia .opcion-experiencia:hover {
   box-shadow: 1px 1px 15px rgb(196, 196, 196);
 }
+body main .results-section {
+  padding: 20px 50px;
+}
 body main .results-section .results-container {
   padding: 100px 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgb(196, 196, 196);
 }
 body main .results-section .results-container a {
   width: 50%;
@@ -168,7 +177,6 @@ body main .results-section .results-container a .result {
   width: 100%;
   display: flex;
   background-color: #fff;
-  border: 0.5px solid rgb(73, 73, 73);
   border-radius: 15px;
   box-shadow: 1px 1px 15px rgb(196, 196, 196);
   transition: box-shadow 0.5s;
@@ -209,18 +217,50 @@ body main .video {
   justify-content: center;
   margin: 50px 0;
 }
-body main .principales-destinos-h2 {
-  font-weight: 700;
+body main .principales-destinos {
+  background-color: rgb(72, 136, 255);
+  padding: 50px 0 100px 0;
+  z-index: -77;
+  position: relative;
+}
+body main .principales-destinos img:first-child {
+  position: fixed;
+  left: 30px;
+  top: -20px;
+  z-index: -7;
+  width: 200px;
+  opacity: 0.04;
+}
+body main .principales-destinos img:nth-child(2) {
+  position: fixed;
+  right: 50px;
+  top: 300px;
+  z-index: -7;
+  width: 200px;
+  opacity: 0.04;
+}
+body main .principales-destinos img:nth-child(3) {
+  position: fixed;
+  right: 500px;
+  top: 500px;
+  z-index: -7;
+  width: 200px;
+  opacity: 0.1;
+}
+body main .principales-destinos .principales-destinos-h2 {
+  font-weight: 900;
   margin-left: 150px;
   margin-bottom: 10px;
-  color: rgb(73, 73, 73);
+  color: #fff;
+  font-size: 4rem;
 }
-body main .principales-destinos {
+body main .principales-destinos .destinos-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 30px;
 }
-body main .principales-destinos .destino {
+body main .principales-destinos .destinos-container .destino {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -228,19 +268,20 @@ body main .principales-destinos .destino {
   border-radius: 15px;
   transition: box-shadow 0.5s;
   cursor: pointer;
+  background-color: #fff;
 }
-body main .principales-destinos .destino img {
+body main .principales-destinos .destinos-container .destino img {
   width: 300px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-body main .principales-destinos .destino h4, body main .principales-destinos .destino p {
+body main .principales-destinos .destinos-container .destino h4, body main .principales-destinos .destinos-container .destino p {
   margin-left: 10px;
 }
-body main .principales-destinos .destino p {
+body main .principales-destinos .destinos-container .destino p {
   margin-bottom: 10px;
 }
-body main .principales-destinos .destino:hover {
+body main .principales-destinos .destinos-container .destino:hover {
   box-shadow: 1px 1px 15px rgb(196, 196, 196);
 }
 body main .button-accesibility-options {
@@ -260,6 +301,9 @@ body main .button-accesibility-options {
 }
 body main .button-accesibility-options:hover {
   background-color: rgb(31, 99, 225);
+}
+body main .button-accesibility-options img {
+  width: 50px;
 }
 body main .accesibility-popup {
   display: flex;
