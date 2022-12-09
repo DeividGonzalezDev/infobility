@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/925379aaa1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Around The World</title>
+</head>
+<body>
+    <header>
+        <img src="./sources/logo-infobility.png" alt="Logo de Infobility" srcset="">
+        <li>
+            <ul><a href="">About Us</a></ul>
+            <ul><a href="">Explorar</a></ul>
+            <ul><button>Get Started</button></ul>
+        </li>
+    </header>
+    <main>
+        <section class="search-section">
+            <h1>Encuentra Tu Lugar Ideal</h1>
+            <h3>Experiencias en todo el mundo con información de accesibilidad verificada. ¡Encontremos la tuya juntos!</h3>
+            <div class="options">
+                <div class="option option-clicked" onclick="clicked(event)">
+                    <i class="fa-solid fa-bed"></i>
+                    <h4>Alojamientos</h4>
+                </div>
+                <div class="option" onclick="clicked(event)">
+                    <i class="fa-solid fa-person-running"></i>
+                    <h4>Actividades</h4>
+                </div>
+                <div class="option" onclick="clicked(event)">
+                    <i class="fa-solid fa-route"></i>
+                    <h4>Tours Personalizados</h4>
+                </div>
+            </div>
+            <div class="search-options">
+                <div>
+                    <h3>A Donde Quieres Ir?</h3>
+                    <input type="text" placeholder="Introduce el Nombre de Destino" id="search-query">
+                </div>
+                <button id="search" onclick="search()">Buscar</button>
+            </div>
+        </section>
+        <section class="opciones-de-experiencia">
+            <div class="opcion-experiencia">
+                <img src="https://wheeltheworld.com/assets/homepage/categoryIcons/beach/mobile.svg" alt="">
+                <h4>Playa</h4>
+            </div>
+            <div class="opcion-experiencia">
+                <img src="https://wheeltheworld.com/assets/homepage/categoryIcons/adventure/mobile.svg" alt="">
+                <h4>Aventura</h4>
+            </div>
+            <div class="opcion-experiencia">
+                <img src="https://wheeltheworld.com/assets/homepage/categoryIcons/nature/mobile.svg" alt="">
+                <h4>Naturaleza</h4>
+            </div>
+            <div class="opcion-experiencia">
+                <img src="https://wheeltheworld.com/assets/homepage/categoryIcons/big city/mobile.svg" alt="">
+                <h4>Ciudad</h4>
+            </div>
+        </section>
+        <section class="results-section">
+            <div class="results-container">
+                <h2 class="texto-no-hay-busqueda">Los Resultados de las Busquedas Apareceran aqui</h2>
+            </div>
+        </section>
+        
+        <h2 class="principales-destinos-h2">Principales Destinos Acessibles</h2>
+        <section class="principales-destinos">
+            <div class="destino">
+                <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" alt="">
+                <h4>Nueva York</h4>
+                <p>Estados Unidos</p>
+            </div>
+            <div class="destino">
+                <img src="https://wheeltheworld.com/_next/image?url=https%3A%2F%2Fassets.wheeltheworld.com%2Flistings%2Fdestinations%2F62cd8d2704137237101706_main.jpg&w=1920&q=75" alt="">
+                <h4>Miami</h4>
+                <p>Estados Unidos</p>
+            </div>
+            <div class="destino">
+                <img src="https://montevideo.gub.uy/sites/default/files/styles/galeriaslideshowcontenido/public/biblioteca/imf5909.jpg?itok=Giu37pav" alt="">
+                <h4>Montevideo</h4>
+                <p>Uruguay</p>
+            </div>
+        </section>
+        <!-- <section class="accesibility-option"> -->
+            <div class="button-accesibility-options"><i class="fa-solid fa-user"></i></div>
+            <div class="accesibility-popup cerrar">
+                <h2 class="options-title">Opciones de Accesibilidad</h2>
+                <div>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <h2>Opciones para discapacidades auditivas</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <h2>Opciones para discapacidades visuales</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-hand"></i>
+                    <h2>Opciones para discapacidades Motoras</h2>
+                </div>
+            </div>
+        <!-- </section> -->
+
+    </main>
+    <footer>
+        <section class="section1footer">
+            <div class="footerbox1">
+                <div class="logofooter">
+                    <img class="logoTest" src="./sources/logo-infobility.png" alt="logo footer">
+                </div>
+    
+                <div class="redes">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    
+                    <ul class="ul ul-1">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Precios</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                    </ul>
+                    
+                    <ul class="ul">
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Donaciones</a></li>
+                    </ul>
+            
+                <div class="formgo">
+                    <form action="#" id="email" method="post">
+                    <input type="email" placeholder="Update in your ibox..." name="email" class="emailbox">
+                    <input  class="gobutton" type="submit" value="Go">
+                    </form>
+                </div>
+    
+                </section>
+    
+                <section class="section2footer">
+                    <p class="footerp">Copyright 2022. All Rights Reserved to Kikitos de Ricota. </br> Designed with ❤️ By Deivid Gonzalez</p>
+                </section>
+    </footer>
+    <script>
+        function clicked(e) {
+            let options = document.querySelectorAll('.option');
+            options.forEach(k=>{
+                if(k.classList.contains('option-clicked')) k.classList.remove('option-clicked')
+            })
+            let option;
+            e.path.forEach(i => {
+                if(i.className === 'option') option = i
+            });
+            option.classList.add('option-clicked')
+        }
+        function search(){
+            document.querySelector('.results-container').innerHTML = '<img src="./sources/394.gif" alt="">'
+            let inputValue = document.querySelector('#search-query').value;
+            searchResults(inputValue)
+        }
+        function searchResults(query){
+            let results = [];
+            fetch('/api/v1/' + query).then(response =>{
+            let res = response.json()
+            return res
+        }).then(data =>{
+            results = data
+            insertNewHTML(results)
+        })
+        }
+        function insertNewHTML(results){
+            if(results[0].error){
+                return document.querySelector('.results-container').innerHTML = `<h1 class="texto-no-hay-busqueda">${results[0].error}</h2>`;
+            }
+            let html = '';
+            results.forEach(e =>{
+                html += `<a href="${e.url}">
+                    <div class="result">
+                        <img src="${e.img}" alt="">
+                        <div class="info-container">
+                            <p class="calification">${e.calification}</p>
+                            <h2 class="title">${e.title}</h2>
+                            <p class="description">${e.description}</p>
+                            <h6 class="location">${e.location}</h6>
+                        </div>
+                    </div>
+                </a>`
+            })
+            document.querySelector('.results-container').innerHTML = html;
+        }
+        let optionsButton = document.querySelector('.button-accesibility-options');
+
+        optionsButton.addEventListener('click', openOptions)
+
+        function openOptions(){
+            let popup = document.querySelector('.accesibility-popup');
+            popup.classList.toggle('cerrar');
+        }
+    </script>
+</body>
+</html>

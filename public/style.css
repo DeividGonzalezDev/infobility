@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(72, 136, 255);
+  border-radius: 15px;
+}
+
+body header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+body header img {
+  width: 200px;
+  cursor: pointer;
+}
+body header h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+body header li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+body header li ul a {
+  text-decoration: none;
+  color: rgb(72, 136, 255);
+  font-weight: 700;
+}
+body header li ul button {
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: rgb(72, 136, 255);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+body main .search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+body main .search-section h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+body main .search-section .options {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 50px;
+  background-color: rgb(216, 216, 216);
+  width: 60%;
+  box-shadow: 2px 2px 20px rgb(183, 183, 183);
+}
+body main .search-section .options .option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(73, 73, 73);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 40px;
+  transition: background-color 0.5s;
+  border-radius: 15px;
+}
+body main .search-section .options .option:hover {
+  background-color: rgb(196, 196, 196);
+}
+body main .search-section .options .option-clicked {
+  background-color: rgb(72, 136, 255);
+  color: #fff;
+}
+body main .search-section .options .option-clicked:hover {
+  background-color: rgb(31, 99, 225);
+  color: #fff;
+}
+body main .search-section .search-options {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-end;
+  border: 0.5px solid rgb(73, 73, 73);
+  border-radius: 15px;
+  padding: 25px 15%;
+  box-shadow: 1px 1px 5px rgb(196, 196, 196);
+}
+body main .search-section .search-options div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+body main .search-section .search-options div h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+body main .search-section .search-options div #search-query {
+  border: 0.5px solid #000;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+body main .search-section .search-options div #search-query:focus {
+  outline: none;
+}
+body main .search-section .search-options #search {
+  padding: 11px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(72, 136, 255);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+body main .search-section .search-options #search:hover {
+  background-color: rgb(31, 99, 225);
+}
+body main .opciones-de-experiencia {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+body main .opciones-de-experiencia .opcion-experiencia {
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px rgb(196, 196, 196);
+}
+body main .opciones-de-experiencia .opcion-experiencia img {
+  width: 150px;
+}
+body main .opciones-de-experiencia .opcion-experiencia:hover {
+  box-shadow: 1px 1px 15px rgb(196, 196, 196);
+}
+body main .results-section .results-container {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+body main .results-section .results-container a {
+  width: 50%;
+  text-decoration: none;
+}
+body main .results-section .results-container a .result {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  border: 0.5px solid rgb(73, 73, 73);
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgb(196, 196, 196);
+  transition: box-shadow 0.5s;
+}
+body main .results-section .results-container a .result img {
+  width: 200px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+body main .results-section .results-container a .result .info-container {
+  padding: 10px 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .results-section .results-container a .result .info-container .calification {
+  color: rgb(73, 73, 73);
+  font-size: 0.7rem;
+}
+body main .results-section .results-container a .result .info-container .title {
+  color: rgb(72, 136, 255);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+body main .results-section .results-container a .result .info-container .description {
+  color: #000;
+  font-size: 0.9rem;
+}
+body main .results-section .results-container a .result .info-container .location {
+  color: rgb(73, 73, 73);
+}
+body main .results-section .results-container a .result:hover {
+  box-shadow: 0 0 30px rgba(72, 136, 255, 0.385);
+}
+body main .video {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+body main .principales-destinos-h2 {
+  font-weight: 700;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  color: rgb(73, 73, 73);
+}
+body main .principales-destinos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+body main .principales-destinos .destino {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 0.5px solid rgb(183, 183, 183);
+  border-radius: 15px;
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+}
+body main .principales-destinos .destino img {
+  width: 300px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+body main .principales-destinos .destino h4, body main .principales-destinos .destino p {
+  margin-left: 10px;
+}
+body main .principales-destinos .destino p {
+  margin-bottom: 10px;
+}
+body main .principales-destinos .destino:hover {
+  box-shadow: 1px 1px 15px rgb(196, 196, 196);
+}
+body main .button-accesibility-options {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(72, 136, 255);
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+body main .button-accesibility-options:hover {
+  background-color: rgb(31, 99, 225);
+}
+body main .accesibility-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 0.5px solid rgb(183, 183, 183);
+  width: 300px;
+}
+body main .accesibility-popup .options-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgb(72, 136, 255);
+  text-align: center;
+}
+body main .accesibility-popup div {
+  background-color: rgb(72, 136, 255);
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  transition: all 0.5s;
+}
+body main .accesibility-popup div:hover {
+  background-color: rgb(31, 99, 225);
+  box-shadow: 1px 1px 15px rgb(196, 196, 196);
+}
+body main .accesibility-popup div h2 {
+  font-size: 1rem;
+}
+body main .cerrar {
+  display: none;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  margin-bottom: 0px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body footer .section1footer {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 2rem;
+  width: 90%;
+}
+body footer .section1footer .footerbox1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25%;
+  min-width: 290px;
+}
+body footer .section1footer .footerbox1 .logoTest {
+  width: 135px;
+  display: flex;
+  padding-bottom: 30px;
+}
+body footer .section1footer .footerbox1 .redes {
+  order: 1;
+}
+body footer .section1footer .footerbox1 .redes a {
+  margin: 0 rem 0.2rem;
+}
+body footer .section1footer .footerbox1 .redes a i {
+  color: rgb(73, 73, 73);
+  font-size: 1.45em;
+}
+body footer .section1footer .footerbox1 .redes a i:hover {
+  color: rgb(72, 136, 255);
+}
+body footer .section1footer .ul-1 {
+  margin-left: -200px;
+}
+body footer .section1footer .ul li {
+  list-style-type: none;
+}
+body footer .section1footer .ul li a {
+  text-decoration: none;
+  color: rgb(73, 73, 73);
+}
+body footer .section1footer .ul li a:hover {
+  color: rgb(72, 136, 255);
+}
+body footer .section1footer .formgo {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+body footer .section1footer .formgo .emailbox {
+  width: 225px;
+  height: 33px;
+  border-radius: 10px;
+}
+body footer .section1footer .formgo .gobutton {
+  background-color: rgb(72, 136, 255);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: 700;
+}
+body footer .section1footer .formgo .gobutton:hover {
+  background-color: rgb(31, 99, 225);
+  box-shadow: 0 0 50px -10px rgb(183, 183, 183);
+}
+body .section2footer {
+  color: rgb(72, 136, 255);
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  font-weight: 900;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
